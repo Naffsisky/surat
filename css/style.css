@@ -1,0 +1,30 @@
+.small-container {
+  width: 80%;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f5f5;
+}
+
+thead {
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 auto;
+}
+tbody {
+  text-align: center;
+}
+
+.navbar .nav-item .nav-link i {
+  font-size: 20px;
+  padding-right: 5px;
+}
+
+.navbar .nav-item .nav-link.active {
+  font-weight: 550;
+}
+
+/* Path: css/style.css */
