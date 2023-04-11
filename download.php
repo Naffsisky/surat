@@ -1,11 +1,11 @@
-<!-- membuat file untuk download file dari surat -->
 <?php
+    // download file pdf
     require 'functions.php';
     $id = $_GET["id"];
     $result = mysqli_query($conn, "SELECT lampiran_surat FROM surat WHERE id = $id");
     $file = mysqli_fetch_assoc($result);
     $file = $file['lampiran_surat'];
-    $file = 'client/surat/lampiran/' . $file;
+    $file = 'client/surat/' . $file;
     if (file_exists($file)){
         header('Content-Description: File Transfer');
         header('Content-Type: application/octet-stream');
@@ -18,7 +18,7 @@
         exit;
     }
     else{
-        echo "File tidak ditemukan";
+        echo "<script> alert('File tidak ditemukan!'); </script>";
         header("Location: lampiran.php");
     }
     

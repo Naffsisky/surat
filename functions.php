@@ -83,7 +83,7 @@ function lampiran(){
     $namaFileBaru = uniqid();
     $namaFileBaru .= '.';
     $namaFileBaru .= $ekstensiLampiran;
-    $destinationFile = 'client/surat/lampiran/';
+    $destinationFile = 'client/surat/';
 
     // lolos pengecekan, lampiran siap diupload
     move_uploaded_file($tmpName, $destinationFile . $namaFileBaru);
@@ -97,9 +97,9 @@ function hapus($id){
     $result = mysqli_query($conn, "SELECT lampiran_surat FROM surat WHERE id = $id");
     $file = mysqli_fetch_assoc($result);
     $fileName = implode('.', $file);
-    $location = "client/surat/lampiran/$fileName";
+    $location = "client/surat/$fileName";
     if (file_exists($location)){
-        unlink('client/surat/lampiran/' . $fileName);
+        unlink('client/surat/' . $fileName);
     }
     mysqli_query($conn, "DELETE FROM surat WHERE id = $id");
     return mysqli_affected_rows($conn);
