@@ -42,6 +42,9 @@ $data = query ("SELECT * FROM surat ORDER BY id DESC");
                   <li><a class="dropdown-item" href="#">Akun</a></li>
                   <li><a class="dropdown-item" href="#">Pesan</a></li>
                   <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="js/fullscreen/jquery.fullscreen-min.js">Fullscreen</a>
+                  </li>
                   <li><a class="dropdown-item" href="login.html">Keluar</a></li>
                 </ul>
               </li>
@@ -82,7 +85,7 @@ $data = query ("SELECT * FROM surat ORDER BY id DESC");
             <td><?= $row["status_surat"] ?></td>
             <td>
               <a href="#" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i></a>
-              <a href="#" class="btn btn-success btn-sm"><i class="fa-solid fa-check"></i></a>
+              <a href="read.php?id=<?= $row["id"]?>" class="btn btn-success btn-sm"><i class="fa-solid fa-check"></i></a>
               <a href="hapus.php?id=<?= $row["id"]?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin ingin menghapus?');"><i class="fas fa-trash"></i></a>
             </td>
           </tr>
@@ -99,5 +102,6 @@ $data = query ("SELECT * FROM surat ORDER BY id DESC");
       </table>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="js/fullscreen/jquery.fullscreen-min.js"></script>
   </body>
 </html>

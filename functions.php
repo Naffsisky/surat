@@ -23,7 +23,7 @@ function surat($data){
     $nama_surat = htmlspecialchars($data["namaSurat"]);
     $tembusan_surat = htmlspecialchars($data["tembusanSurat"]);
     $tanggal_surat = date("d/m/Y");
-    $status_surat = "Belum Dibaca";
+    $status_surat = "Belum dibaca";
     $lokasi_surat = htmlspecialchars($data["lokasiSurat"]);
     $keterangan_surat = htmlspecialchars($data["keteranganSurat"]);
     $pengirim_surat = htmlspecialchars($data["pengirimSurat"]);
@@ -105,4 +105,14 @@ function hapus($id){
     return mysqli_affected_rows($conn);
 }
 
+function read($id){
+    global $conn;
+    $result = mysqli_query($conn, "SELECT status_surat FROM surat WHERE id = $id");
+    $status = mysqli_fetch_assoc($result);
+    if ($id > 0 && $status['status_surat'] == 'Belum dibaca'){
+        mysqli_query($conn, "UPDATE surat SET status_surat = 'Sudah dibaca' WHERE id = $id");
+    }
+
+    return mysqli_affected_rows($conn);
+}
 ?>
