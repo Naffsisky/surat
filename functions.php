@@ -20,13 +20,13 @@ function surat($data){
     global $conn;
 
     $no_surat = htmlspecialchars($data["noSurat"]);
-    $nama_surat = htmlspecialchars($data["namaSurat"]);
-    $tembusan_surat = htmlspecialchars($data["tembusanSurat"]);
+    $nama_surat = htmlspecialchars(ucwords($data["namaSurat"]));
+    $tembusan_surat = htmlspecialchars(ucwords($data["tembusanSurat"]));
     $tanggal_surat = date("d/m/Y");
     $status_surat = "Belum dibaca";
     $lokasi_surat = htmlspecialchars($data["lokasiSurat"]);
     $keterangan_surat = htmlspecialchars($data["keteranganSurat"]);
-    $pengirim_surat = htmlspecialchars($data["pengirimSurat"]);
+    $pengirim_surat = htmlspecialchars(ucwords($data["pengirimSurat"]));
     $uploader_surat = "Naffsvn";
     $narahubung = htmlspecialchars($data["narahubung"]);
 

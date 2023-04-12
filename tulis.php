@@ -71,15 +71,15 @@ if (!$result){
       <form class="row g-3 my-3" action="" method="post" enctype="multipart/form-data">
         <div class="col-md-6">
           <label for="noSurat" class="form-label">No. Surat</label>
-          <input type="text" class="form-control" id="noSurat" name="noSurat" placeholder="ex. 2620/E2/BP/2020" />
+          <input type="text" class="form-control" id="noSurat" name="noSurat" placeholder="ex. 2620/E2/BP/2020" required />
         </div>
         <div class="col-md-6">
           <label for="namaSurat" class="form-label">Nama Surat</label>
-          <input type="text" class="form-control" id="namaSurat" name="namaSurat" placeholder="ex. Surat pengajuan anggaran" />
+          <input type="text" class="form-control" id="namaSurat" name="namaSurat" placeholder="ex. Surat pengajuan anggaran" required />
         </div>
         <div class="col-12">
           <label for="tembusanSurat" class="form-label">Tembusan</label>
-          <input type="text" class="form-control" id="tembusanSurat" name="tembusanSurat" placeholder="ex. Kepala Dinas, Sekertaris Dinas, dan Seluruh anggota" />
+          <input type="text" class="form-control" id="tembusanSurat" name="tembusanSurat" placeholder="ex. Kepala Dinas, Sekertaris Dinas, dan Seluruh anggota" required />
         </div>
         <div class="col-12">
           <label for="keteranganSurat" class="form-label">Keterangan</label>
@@ -87,7 +87,7 @@ if (!$result){
         </div>
         <div class="col-md-6">
           <label for="pengirimSurat" class="form-label">Dikirim oleh</label>
-          <input type="text" class="form-control" id="pengirimSurat" name="pengirimSurat" placeholder="ex. Kementrian Komunikasi dan Informasi" />
+          <input type="text" class="form-control" id="pengirimSurat" name="pengirimSurat" placeholder="ex. Kementrian Komunikasi dan Informasi" required />
         </div>
         <div class="col-md-4">
           <label for="lokasiPengirim" class="form-label">Lokasi kegiatan</label>
@@ -107,7 +107,7 @@ if (!$result){
         </div>
         <div class="col-12">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck" />
+            <input class="form-check-input" type="checkbox" id="gridCheck" required />
             <label class="form-check-label" for="gridCheck"> Saya bertanggung jawab atas keaslian surat ini </label>
           </div>
         </div>

@@ -5,6 +5,7 @@ require 'functions.php';
 $id = $_GET["id"];
 
 // mengganti status surat menjadi Terbaca
+
 if (read ($id) > 0){
     echo "
     <script>

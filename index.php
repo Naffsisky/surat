@@ -3,6 +3,7 @@ require 'functions.php';
 
 $data = query ("SELECT * FROM surat ORDER BY id DESC");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,7 +44,7 @@ $data = query ("SELECT * FROM surat ORDER BY id DESC");
                   <li><a class="dropdown-item" href="#">Pesan</a></li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="js/fullscreen/jquery.fullscreen-min.js">Fullscreen</a>
+                    <a class="dropdown-item" href="js/fullscreen/jquery.fullscreen-min.js">Full Screen</a>
                   </li>
                   <li><a class="dropdown-item" href="login.html">Keluar</a></li>
                 </ul>
